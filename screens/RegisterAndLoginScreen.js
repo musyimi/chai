@@ -1,7 +1,11 @@
 import { Text, View, TextInput, Button, Pressable, StyleSheet } from "react-native";
 import { SimpleLineIcons, AntDesign , MaterialCommunityIcons, Ionicons} from '@expo/vector-icons';
 
-function RegisterAndLoginScreen() {
+function RegisterAndLoginScreen({onPress, navigation}) {
+   function pressHandler() {
+      navigation.navigate('Home');
+   }
+
    return(
     <>
     <View style={styles.container}>
@@ -27,7 +31,10 @@ function RegisterAndLoginScreen() {
             <View className="flex flex-row justify-end mx-6 mt-4">
                 <Text className="text-sm text-orange-600">Forgot Password?</Text>
             </View>
-            <Pressable className="flex-row justify-center mt-4">
+            <Pressable 
+               onPress={pressHandler}
+               className="flex-row justify-center mt-4"
+               >
                 <Text className="px-24 py-4 bg-primary1 rounded-lg text-white ">Login</Text>
             </Pressable>
             <View className="flex-row justify-center">
