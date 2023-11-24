@@ -1,7 +1,7 @@
 import { Pressable, ScrollView, Text, View ,StyleSheet } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 
-export default function coffeeTile() {
+export default function CoffeeTile() {
     return(
       <ScrollView
         horizontal
@@ -30,9 +30,7 @@ export default function coffeeTile() {
               </View>            
            </View>
           </View>
-           
-           
-             
+ 
          </Pressable>
          <Pressable className="bg-gray-300 rounded-3xl">
           <View style={styles.container}>
