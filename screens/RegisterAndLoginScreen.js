@@ -1,16 +1,18 @@
 import { Text, View, TextInput, Button, Pressable, StyleSheet } from "react-native";
 import { SimpleLineIcons, AntDesign , MaterialCommunityIcons, Ionicons} from '@expo/vector-icons';
+import { StatusBar } from 'expo-status-bar';
 
 function RegisterAndLoginScreen({onPress, navigation}) {
    function pressHandler() {
-      navigation.navigate('Home');
+      navigation.navigate('Home Screen');
    }
 
    return(
     <>
     <View style={styles.container}>
-        <View className="flex flex-col bg-primary1 h-40 rounded-b-2xl  ">
-            <Text className="text-2xl pt-12 px-4 font-bold text-white">Let's get you signed in!</Text>
+     <StatusBar hidden={true}/>
+        <View className="flex flex-col bg-primary1 h-56 rounded-b-2xl  ">
+            <Text className="text-3xl pt-24 px-4 font-bold text-white">Let's get you signed in!</Text>
         </View>
         <View style={styles.authentication}>
             <View className="flex flex-row mx-4 bg-primary5   rounded-full ">
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
   },
   authentication: {
     position: "absolute",
-    marginTop: 136
+    marginTop: 200
   }
 });
 

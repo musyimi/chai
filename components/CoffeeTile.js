@@ -6,7 +6,7 @@ export default function coffeeTile() {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        className="space-x-2 mt-4 mx-4"
+        className="space-x-2 mt-4 ml-2"
       >
          <Pressable
           className="bg-gray-300 rounded-3xl">
