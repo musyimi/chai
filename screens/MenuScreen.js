@@ -15,7 +15,7 @@ function MenuScreen() {
               <Search /> 
            </View>
            <View className="mx-4 mt-4">
-             <Text>Categories</Text>
+             <Text className="font-bold text-lg">Categories</Text>
            </View>
            <View className="mt-2">
               <CategoryItem />

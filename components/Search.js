@@ -26,7 +26,7 @@ export default Search;
 
 const styles = StyleSheet.create({
     search: {
-        position: 'realtive'
+        position: 'relative'
     },
     icon: {
         position: 'absolute', 

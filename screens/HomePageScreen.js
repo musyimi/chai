@@ -4,6 +4,7 @@ import { Ionicons , EvilIcons, Feather} from '@expo/vector-icons';
 import Colors from '../constants/colors';
 import CoffeeTile from "../components/CoffeeTile";
 import FrequentlyOrderedTile from "../components/FrequentlyOrderedTile";
+import Search from '../components/Search';
 
 
 function HomePageScreen() {
