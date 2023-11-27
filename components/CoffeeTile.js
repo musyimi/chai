@@ -1,7 +1,7 @@
 import { Pressable, ScrollView, Text, View ,StyleSheet } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 
-export default function CoffeeTile() {
+export default function CoffeeTile({onPress}) {
     return(
       <ScrollView
         horizontal
@@ -9,7 +9,9 @@ export default function CoffeeTile() {
         className="space-x-2 mt-4 ml-2"
       >
          <Pressable
-          className="bg-gray-300 rounded-3xl">
+          className="bg-gray-300 rounded-3xl"
+          onPress={onPress}
+          >
           <View style={styles.container}>
             <View className="box-border h-52 w-36">
               <View className="box-border h-24 w-32 m-2 bg-gray-400 rounded-2xl">
@@ -32,7 +34,7 @@ export default function CoffeeTile() {
           </View>
  
          </Pressable>
-         <Pressable className="bg-gray-300 rounded-3xl">
+         <Pressable className="bg-gray-300 rounded-3xl"  onPress={onPress}>
           <View style={styles.container}>
             <View className="box-border h-52 w-36">
               <View className="box-border h-24 w-32 m-2 bg-gray-400 rounded-2xl">
@@ -57,7 +59,7 @@ export default function CoffeeTile() {
            
              
          </Pressable>
-         <Pressable className="bg-gray-300 rounded-3xl">
+         <Pressable className="bg-gray-300 rounded-3xl"  onPress={onPress}>
           <View style={styles.container}>
             <View className="box-border h-52 w-36">
               <View className="box-border h-24 w-32 m-2 bg-gray-400 rounded-2xl">
@@ -82,7 +84,7 @@ export default function CoffeeTile() {
            
              
          </Pressable>
-         <Pressable className="bg-gray-300 rounded-3xl">
+         <Pressable className="bg-gray-300 rounded-3xl"  onPress={onPress}>
           <View style={styles.container}>
             <View className="box-border h-52 w-36">
               <View className="box-border h-24 w-32 m-2 bg-gray-400 rounded-2xl">

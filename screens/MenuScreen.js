@@ -5,7 +5,11 @@ import Search from "../components/Search";
 import CategoryItem from "../components/CategoryItem";
 import CoffeeMenu from "../components/CoffeeMenu";
 
-function MenuScreen() {
+function MenuScreen({navigation}) {
+    function onPressHandler() {
+        navigation.navigate('Product');
+    }
+   
     return (
         <View >
            <View className="bg-primary1 h-44 rounded-b-2xl  ">
@@ -18,22 +22,22 @@ function MenuScreen() {
              <Text className="font-bold text-lg">Categories</Text>
            </View>
            <View className="mt-2">
-              <CategoryItem />
+              <CategoryItem onPress={onPressHandler}/>
            </View>
            <View className="flex-row mt-4 mx-6 space-x-4">
                 <View>
-                    <CoffeeMenu />
+                    <CoffeeMenu onPress={onPressHandler}/>
                 </View>
                 <View>
-                    <CoffeeMenu />
+                    <CoffeeMenu onPress={onPressHandler}/>
                 </View>
            </View>
            <View className="flex-row mt-4 mx-6 space-x-4">
                 <View>
-                    <CoffeeMenu />
+                    <CoffeeMenu onPress={onPressHandler}/>
                 </View>
                 <View>
-                    <CoffeeMenu />
+                    <CoffeeMenu onPress={onPressHandler}/>
                 </View>
            </View>
         </View>

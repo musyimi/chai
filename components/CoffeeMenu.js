@@ -1,12 +1,14 @@
 import { Pressable, Text, View ,StyleSheet } from "react-native";
 import { AntDesign, EvilIcons } from '@expo/vector-icons';
 
-function CoffeeMenu() {
+function CoffeeMenu({onPress}) {
 
     return(
         <View className="">
             <Pressable
-                className="bg-gray-300 rounded-3xl w-40">
+                className="bg-gray-300 rounded-3xl w-40"
+                onPress={onPress}
+                >
                 <View style={styles.container}>
                     <View className="box-border h-52">
                     <View className="box-border h-24 w-36 m-2 bg-gray-400 rounded-2xl">

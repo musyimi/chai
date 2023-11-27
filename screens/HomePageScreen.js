@@ -7,7 +7,12 @@ import FrequentlyOrderedTile from "../components/FrequentlyOrderedTile";
 import Search from '../components/Search';
 
 
-function HomePageScreen() {
+function HomePageScreen({navigation}) {
+
+    function onPressHandler() {
+        navigation.navigate('Product');
+    }
+
     return(
         <>       
         <View style={styles.container}>
@@ -45,13 +50,13 @@ function HomePageScreen() {
                     <Text className="font-bold text-gray-800 text-lg">New In</Text>
                 </View> 
                 <ScrollView>
-                    <CoffeeTile />
+                    <CoffeeTile onPress={onPressHandler}/>
                 </ScrollView>   
                 <View className="mx-4 mt-4">
                     <Text className="font-bold text-lg">Frequently Ordered</Text>
                 </View>
                 <ScrollView>
-                   <FrequentlyOrderedTile />
+                   <FrequentlyOrderedTile onPress={onPressHandler} />
                 </ScrollView> 
             </View>
 

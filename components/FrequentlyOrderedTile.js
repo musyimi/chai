@@ -1,14 +1,14 @@
 import { View, Text, ScrollView, Pressable, StyleSheet } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 
-export default function FrequentlyOrderedTile() {
+export default function FrequentlyOrderedTile({onPress}) {
     return(
         <ScrollView 
           vertical
           showsVerticalScrollIndicator={false}
           className="mx-4 mt-4 space-y-2"
         >
-            <Pressable className="bg-gray-300 rounded-lg">
+            <Pressable className="bg-gray-300 rounded-lg" onPress={onPress}>
                 <View style={styles.container}>
                 <View className="border-box h-28 flex-row ">
                     <View className="border-box h-24 w-20 m-2 rounded-lg bg-gray-500">

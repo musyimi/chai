@@ -14,6 +14,7 @@ import MenuScreen from './screens/MenuScreen';
 import FavouritesScreen from './screens/FavouritesScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import CartScreen from './screens/CartScreen';
+import ProductScreen from './screens/ProductScreen';
 
 
 const stack = createStackNavigator();
@@ -107,6 +108,13 @@ export default function App() {
             headerShown: false
           }}
           
+          />
+          <stack.Screen
+            name="Product"
+            component={ProductScreen}
+            options={{
+              headerShown: false,
+            }}
           />
       </stack.Navigator>
 
