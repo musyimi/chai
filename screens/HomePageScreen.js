@@ -1,16 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View , StyleSheet, TextInput, ScrollView } from "react-native";
-import { Ionicons , EvilIcons, Feather} from '@expo/vector-icons';
+import { Text, View , StyleSheet, TextInput, ScrollView, Pressable } from "react-native";
+import { Ionicons , Feather} from '@expo/vector-icons';
 import Colors from '../constants/colors';
 import CoffeeTile from "../components/CoffeeTile";
 import FrequentlyOrderedTile from "../components/FrequentlyOrderedTile";
 import Search from '../components/Search';
 
 
+
 function HomePageScreen({navigation}) {
 
     function onPressHandler() {
         navigation.navigate('Product');
+    }
+
+    function onCafePressHandler() {
+       navigation.navigate('Cafe')
     }
 
     return(
@@ -28,7 +33,13 @@ function HomePageScreen({navigation}) {
                     </View>
                     <View className="flex-row justify-between mx-4 my-2">
                         <Text className="text-white text-lg ">Your cafe: Kwa Mathee</Text>
-                        <Text className="text-white font-bold text-lg">change</Text>
+                        <Pressable
+                          onPress={onCafePressHandler}
+                        >
+                           <Text className="text-white font-bold text-lg">
+                                change
+                            </Text>
+                        </Pressable>
                     </View>
                     <View className="flex-row ml-24">
                         <Text className="text-white">Ngara close, Nairobi</Text>

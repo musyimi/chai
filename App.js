@@ -15,6 +15,11 @@ import FavouritesScreen from './screens/FavouritesScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import CartScreen from './screens/CartScreen';
 import ProductScreen from './screens/ProductScreen';
+import CafeScreen from './screens/CafeScreen';
+import DeliveryScreen from './screens/DeliveryScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import ReviewOrderScreen from './screens/ReviewOrderScreen';
+import ConfirmationScreen from './screens/ConfirmationScreen';
 
 
 const stack = createStackNavigator();
@@ -112,6 +117,44 @@ export default function App() {
           <stack.Screen
             name="Product"
             component={ProductScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+
+          <stack.Screen
+            name="Cafe"
+            component={CafeScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+
+          <stack.Screen
+            name="Delivery"
+            component={DeliveryScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <stack.Screen
+            name="Payment"
+            component={PaymentScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+
+         <stack.Screen
+            name="Review"
+            component={ReviewOrderScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <stack.Screen
+            name="Confirmation"
+            component={ConfirmationScreen}
             options={{
               headerShown: false,
             }}

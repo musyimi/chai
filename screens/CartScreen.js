@@ -1,9 +1,15 @@
-import { Text, View } from "react-native";
+import { Text, View, Pressable } from "react-native";
 import Cart from "../components/Cart";
 import Promo from "../components/Promo";
 import Checkout from "../components/Checkout";
 
-function CartScreen() {
+
+
+function CartScreen({navigation}) {
+    function onPressHandler() {
+        navigation.navigate('Delivery');
+    }
+    
     return(
         <>
           <View className="bg-primary1 h-36 rounded-b-2xl  ">
@@ -19,9 +25,11 @@ function CartScreen() {
         <View className="mx-4 mt-2">
             <Promo />
         </View>
-        <View>
+        <Pressable
+          onPress={onPressHandler}
+          >
             <Checkout />
-        </View>
+        </Pressable>
         </>
         
     );
